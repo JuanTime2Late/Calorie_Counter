@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         mDatabaseHelper = new Holder(this); // object initialized with new Database class obj
 
         btn2.setOnClickListener(view -> { //On click it will do the next
-            String newEntry = cals.getText().toString(); // Declaring variable to hold calorie input
+            String calories = cals.getText().toString(); // Declaring variable to hold calorie input
+            String food1 = food.getText().toString(); //Declaring variable to hold food input.
             if(cals.length() != 0 && food.length() != 0) { //
                 if(!tv1.getText().toString().isEmpty() && !(tv2.getText().toString().isEmpty())) {
                     int eat = Integer.parseInt(tv2.getText().toString());
@@ -59,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                     int var = num - var1; //Subtracts the Eaten total from the goal(can go negative)
                     tv3.setText(Integer.toString(var)); //sets Total subtraction to the remaining.
                 }
-                AddData(newEntry); //adds to the list the calorie amount
+                String together = food1 + "   " + calories; //Concatenate Both
+                AddData(together); //adds to the list the concatenated food and calorie amount
                 cals.setText(""); //After submission edittext is emptied again.
                 food.setText(""); //After submission edittext is emptied again.
             } else { toastMessage("Either Food or Calories is empty.");} //else tell the user one

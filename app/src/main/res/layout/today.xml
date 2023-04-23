@@ -9,25 +9,22 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calories &amp; Food"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="699dp"
+        android:text="Food &amp; Calories"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp" />
 
     <ListView
         android:id="@+id/listFood"
-        android:layout_width="210dp"
-        android:layout_height="700dp"
+        android:layout_width="match_parent"
+        android:layout_height="695dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="1dp"></ListView>
-
-    <ListView
-        android:id="@+id/listFood2"
-        android:layout_width="199dp"
-        android:layout_height="699dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="212dp"
-        android:layout_marginBottom="1dp" />
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="2dp" />
 
 </RelativeLayout>
