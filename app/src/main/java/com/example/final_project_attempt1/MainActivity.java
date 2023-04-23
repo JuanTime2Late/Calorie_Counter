@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                     tv3.setText(Integer.toString(var)); //sets Total subtraction to the remaining.
                 }
                 AddData(newEntry); //adds to the list the calorie amount
-                cals.setText(""); //after input it makes the edittext empty again.
+                cals.setText(""); //After submission edittext is emptied again.
+                food.setText(""); //After submission edittext is emptied again.
             } else { toastMessage("Either Food or Calories is empty.");} //else tell the user one
                                                                         //of the fields is empty.
         });
@@ -95,3 +96,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent2);
     }
 }
+
+///////////////////////////////NOTES\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* Back button in action bar is not to be used. A lot of the functions to work on it are deprecated
+   DO NOT ADD a back button to the UI the user should already have some type of back button.
+   Use emulator Pixel 6 Pro API 30 for best results.
+
+   Known errors:
+   * Food input and list output not implemented
+   * Default goal not set. User has to input a goal before subtraction and result are made.
+   * Calories don't show result when goal is not set.
+
+   Fixed:
+   * Database for calories
+   * today's calories does not crash anymore (found that integers were being output and it
+   expects a string.)
+   * Change goal keeps the current goal and can go back without it changing.
+   * Calorie and food entries are cleared after submission. (EditTextHere.setText("");)
+   * Added messages to methods to easier identify what method causes the crashing (keep an eye on
+   getData)
+
+ */
