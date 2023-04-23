@@ -105,11 +105,12 @@ public class MainActivity extends AppCompatActivity {
    Use emulator Pixel 6 Pro API 30 for best results.
 
    Known errors:
-   * Food input and list output not implemented
    * Default goal not set. User has to input a goal before subtraction and result are made.
    * Calories don't show result when goal is not set.
 
    Fixed:
+   * Food input and list output not implemented FIX Concatenated when inputs were put in. Fix can
+   be found in lines 63 and 64.
    * Database for calories
    * today's calories does not crash anymore (found that integers were being output and it
    expects a string.)
