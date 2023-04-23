@@ -95,5 +95,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent2 =new Intent(MainActivity.this, Goal.class);
         intent2.putExtra("message", input);
         startActivity(intent2);
-    }
+    } //this hs==fdfad affvaeevawfavwfaevfa
 }
