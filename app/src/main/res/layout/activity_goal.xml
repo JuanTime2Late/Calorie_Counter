@@ -28,10 +28,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/current_goal"
-        android:textColor="#AEAEAE"
+        android:text="CURRENT GOAL"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="34sp"
+        android:textColor="#AEAEAE"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -43,18 +44,20 @@
         android:id="@+id/editTextNumber"
         android:layout_width="232dp"
         android:layout_height="69dp"
+        android:autofillHints=""
+        android:backgroundTint="@android:color/holo_green_light"
         android:ems="10"
+        android:hint="NEW GOAL"
         android:imeActionLabel="Enter New Goal"
         android:inputType="number"
+        android:textAlignment="center"
         android:textColor="#AEAEAE"
-        android:backgroundTint="@android:color/holo_green_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.527" />
 
     <Button
         android:id="@+id/Submit_goal"
@@ -73,13 +76,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00"
-        android:textSize="24sp"
         android:textColor="#AEAEAE"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.271" />
 
     <TextView
         android:id="@+id/text_view_date"
