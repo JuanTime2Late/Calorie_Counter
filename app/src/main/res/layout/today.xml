@@ -4,29 +4,47 @@
     xmlns:adnroid="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#FF202020"
     android:layout_height="match_parent">
 
+
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="699dp"
-        android:text="Food &amp; Calories"
-        android:textAlignment="center"
+        android:id="@+id/textView5"
+        android:layout_width="201dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="2dp"
+        android:text="Calories"
+        android:textAlignment="textEnd"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="24sp" />
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:divider="#FFCC00"
+        android:dividerHeight="4dp"
+        android:text="Food"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="50sp" />
 
     <ListView
         android:id="@+id/listFood"
         android:layout_width="match_parent"
-        android:layout_height="675dp"
+        android:layout_height="663dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="66dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="2dp"
-        android:textAlignment="center" />
+
+        android:divider="@android:color/holo_green_light"
+        android:dividerHeight="1dp"
+        android:textAlignment="textEnd" />
 
 </RelativeLayout>

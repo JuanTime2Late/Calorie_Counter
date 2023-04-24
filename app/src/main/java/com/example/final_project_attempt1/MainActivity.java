@@ -61,7 +61,14 @@ public class MainActivity extends AppCompatActivity {
                     int var = num - var1; //Subtracts the Eaten total from the goal(can go negative)
                     tv3.setText(Integer.toString(var)); //sets Total subtraction to the remaining.
                 }
-                String together = food1.toUpperCase() + "\n" + calories + " calories"; //Concatenate Both
+                int totals = 35, i;
+                int total1 = (food.getText().length() + cals.getText().length());
+                int uses = totals - total1;
+                StringBuilder spaces = new StringBuilder("");
+                for(i = 0; i <= uses; ++i){
+                       spaces.append(".");
+                }
+                String together = food1.toUpperCase() + spaces + calories; //Concatenate Both
                 AddData(together); //adds to the list the concatenated food and calorie amount
                 cals.setText(""); //After submission edittext is emptied again.
                 food.setText(""); //After submission edittext is emptied again.
