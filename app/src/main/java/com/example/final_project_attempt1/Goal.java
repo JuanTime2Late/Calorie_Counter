@@ -10,14 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.OnBackPressedCallback;
-import androidx.activity.OnBackPressedDispatcherOwner;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.Objects;
 
 public class Goal extends AppCompatActivity {
     EditText edt1;
@@ -29,7 +25,6 @@ public class Goal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goal);
-
 
         /////////////Date Config\\\\\\\\\\\\\\\\
         Calendar calendar = Calendar.getInstance();

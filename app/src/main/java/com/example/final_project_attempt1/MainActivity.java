@@ -2,6 +2,7 @@ package com.example.final_project_attempt1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn3 = findViewById(R.id.button2); //Button for Today's Calories
         mDatabaseHelper = new Holder(this); // object initialized with new Database class obj
 
-        btn2.setOnClickListener(view -> { //On click it will do the next
+         btn2.setOnClickListener(view -> { //On click it will do the next
             String calories = cals.getText().toString(); // Declaring variable to hold calorie input
             String food1 = food.getText().toString(); //Declaring variable to hold food input.
             if(cals.length() != 0 && food.length() != 0 && tv1.length() != 0) { //
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     int var = num - var1; //Subtracts the Eaten total from the goal(can go negative)
                     tv3.setText(Integer.toString(var)); //sets Total subtraction to the remaining.
                 }
-                String together = food1 + "   " + calories; //Concatenate Both
+                String together = food1.toUpperCase() + "\n" + calories + " calories"; //Concatenate Both
                 AddData(together); //adds to the list the concatenated food and calorie amount
                 cals.setText(""); //After submission edittext is emptied again.
                 food.setText(""); //After submission edittext is emptied again.
@@ -88,13 +89,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void toastMessage(String s) { //Method so I dont have to retype it all the time.
-        Toast.makeText(this,s , Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 
     public void openGoal(){ //Function to open Goal activity
         String input = tv1.getText().toString(); //Input takes the string from goal calories
-        Intent intent = new Intent(this, Goal.class); //receives from goal current goal
-        startActivity(intent);
+        //Intent intent = new Intent(this, Goal.class); //receives from goal current goal
+        //startActivity(intent);
         Intent intent2 =new Intent(MainActivity.this, Goal.class); //sends current goal
         intent2.putExtra("message", input);                               //to goal activity
         startActivity(intent2);
@@ -107,10 +108,11 @@ public class MainActivity extends AppCompatActivity {
    Use emulator Pixel 6 Pro API 30 for best results.
 
    Known errors:
-   * Default goal not set. User has to input a goal before subtraction and result are made.
    * Calories don't show result when goal is not set.
 
    Fixed:
+   * Default goal not set. User has to input a goal before subtraction and result are made.
+   FIXED = goal
    * Food input and list output not implemented FIX Concatenated when inputs were put in. Fix can
    be found in lines 63 and 64.
    * Database for calories

@@ -38,7 +38,7 @@ public class today extends AppCompatActivity {
         while(data.moveToNext()){
             listData.add(data.getString(1)); //this will iterate through the database and add
         }                                       //to listview until filled.
-        ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
+        ListAdapter adapter = new ArrayAdapter<>(this, R.layout.textviewlist, listData);
         mListView.setAdapter(adapter); //these two lines help adapt the data from database to listview
     }
 
