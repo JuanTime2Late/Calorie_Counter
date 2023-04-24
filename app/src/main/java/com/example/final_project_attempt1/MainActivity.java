@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(view -> { //On click it will do the next
             String calories = cals.getText().toString(); // Declaring variable to hold calorie input
             String food1 = food.getText().toString(); //Declaring variable to hold food input.
-            if(cals.length() != 0 && food.length() != 0) { //
+            if(cals.length() != 0 && food.length() != 0 && tv1.length() != 0) { //
                 if(!tv1.getText().toString().isEmpty() && !(tv2.getText().toString().isEmpty())) {
                     int eat = Integer.parseInt(tv2.getText().toString());
                     int cal = Integer.parseInt(cals.getText().toString());
@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 AddData(together); //adds to the list the concatenated food and calorie amount
                 cals.setText(""); //After submission edittext is emptied again.
                 food.setText(""); //After submission edittext is emptied again.
+            } else if (tv1.length() == 0) { //Asks the user for the goal to be set first.
+                toastMessage("Please enter a goal first.");
             } else { toastMessage("Either Food or Calories is empty.");} //else tell the user one
                                                                         //of the fields is empty.
         });
